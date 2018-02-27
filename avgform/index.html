@@ -1,24 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="style.css">
-
+	<meta charset="utf-8">
+	<title></title>
+	<link href="style/style.less" rel="stylesheet/less" type="text/css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js">
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="col-2 col-m-3"></div>
+	<div class="container-header">
+		<div class="row">
+			<div class="col-12 col-m-12">
+				<div class="header">
+					<div class="container-logo"><img alt="" id="logoItem" src="style/pictures/rsz_2logo.png"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-page">
+		<div class="subheader" id="headertitle">
+			<h1>AVG Tool</h1>
+		</div>
+		<div class="row">
+			<div class="col-2 col-m-2">
+				&nbsp;
+			</div>
+			<div class="col-8 col-m-8">
+				<div class="container-content center" id="questionOutput">
+					<div class="col-12 col-m-12">
+						<div id="title">
+							<!-- DPO zelftest: heeft uw organisatie een privacyfunctionaris nodig? -->
+						</div>
+					</div>
+					<div class="col-12 col-m-12">
+						<p id="subtitle">
+							<!-- De wet bescherming persoonsgegevens wordt strenger, heeft uw organisatie een Data Protection Officer (DPO) nodig? -->
+						</p>
+					</div>
+					<div class="col-12 col-m-12">
+						<p id="content">
+							<!-- Elke organisatie heeft tot 25 mei 2018 de tijd om te voldoen aan alle verplichtingen uit de Europese General<br> -->
+						<!-- Data Protection Regulation (‘GDPR’) ofwel de Algemene Verordening Gegevensbescherming (‘AVG’).<br>
+						Zo verplicht deze, onder bepaalde omstandigheden, organisaties een DPO in het leven te roepen.<br>
+						Dit is een privacyfunctionaris die binnen de organisatie toezicht houdt op de verwerking van persoonsgegevens en naleving van de AVG.<br>
+						<!-- Wij helpen u graag met het beantwoorden van de vraag of uw organisatie een functionaris nodig heeft,<br>
 
-    <div class="col-8 col-m-6" id="questionOutput">
-      <form>
-        <label class="question"></label>
-        <div class="answer"></div>
-      </form>
-    </div>
+						die toeziet op de bescherming (inclusief beveiliging) van persoonsgegevens.<br>
+						Speciaal hiervoor heeft Kneppelhout & Korthals Advocaten de ‘DPO zelftest’ ontwikkeld.<br>
+						Na het invullen van dit gratis assessment ontvangt u direct, een vrijblijvend advies met betrekking tot de AVG gratis per e-mail.<br>
+						Waar bepaalde begrippen zijn aangeduid met krijgt u met één klik meer informatie te zien. -->
+					</p>
+					</div><button class="questionButton" id="start">Start!</button>
+				</div>
+			</div>
+			<div class="col-2 col-m-2">
+				&nbsp;
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2 col-m-2">
+				&nbsp;
+			</div>
+			<div class="col-8 col-m-8">
+				<form class="form center" id="form">
+					<label for="bedrijfsnaam" class="labelform">Bedrijfsnaam:</label >
+					<input class="forminput" name="Bedrijfsnaam" id="bedrijfsnaam" type="text" value="Carnaval!">
 
-  <div class="col-2 col-m-3">
+					<label for="naam" class="labelform">Naam:</label>
+					<input class="forminput" name="naam" id="naam" type="text" value="Alaaf!!!!">
 
-  </div>
-  <script type="text/javascript" src="js.js">  </script>
+					<label for="email" class="labelform">Email:</label>
+					<input class="forminput" name="email" id="email" type="email" value="test@example.com"><br>
+
+					<input class="questionButton" id="result" type="submit">
+				</form>
+			<div class="col-2 col-m-2">
+				&nbsp;
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2 col-m-1">
+				&nbsp;
+			</div>
+			<div class="col-8 col-m-10">
+				<div class="container-result center" id="resultPage"></div>
+			</div>
+			<div class="col-2 col-m-1">
+				&nbsp;
+			</div>
+		</div>
+	</div>
+	<div class="container-footer">
+		<div class="row">
+			<div class="footer">
+				<div class="col-2 col-m-2">
+					&nbsp;
+				</div>
+				<div class="col-8 col-m-8">
+					<footer class="center" id="footer">
+						<a class="fa fa-facebook" href="#"></a> <a class="fa fa-twitter" href="#"></a> <a class="fa fa-google" href="#"></a>
+					</footer>
+				</div>
+
+				<div class="col-2 col-m-2">
+					&nbsp;
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="javascript/js.js" type="text/javascript">
+	</script>
 </body>
 </html>

@@ -1,0 +1,337 @@
+.row::after {
+     content: "";
+     clear: both;
+     display: table;
+}
+ [class*="col-"] {
+     float: left;
+}
+ [class*="col-"] {
+     width: 100%;
+}
+
+ @media only screen and (min-width: 600px) {
+    /* For tablets: */
+     .col-m-1 {
+        width: 8.33%;
+    }
+     .col-m-2 {
+        width: 16.66%;
+    }
+     .col-m-3 {
+        width: 25%;
+    }
+     .col-m-4 {
+        width: 33.33%;
+    }
+     .col-m-5 {
+        width: 41.66%;
+    }
+     .col-m-6 {
+        width: 50%;
+    }
+     .col-m-7 {
+        width: 58.33%;
+    }
+     .col-m-8 {
+        width: 66.66%;
+    }
+     .col-m-9 {
+        width: 75%;
+    }
+     .col-m-10 {
+        width: 83.33%;
+    }
+     .col-m-11 {
+        width: 91.66%;
+    }
+     .col-m-12 {
+        width: 100%;
+    }
+}
+ @media only screen and (min-width: 768px) {
+    /* For desktop: */
+     .col-1 {
+        width: 8.33%;
+    }
+     .col-2 {
+        width: 16.66%;
+    }
+     .col-3 {
+        width: 25%;
+    }
+     .col-4 {
+        width: 33.33%;
+    }
+     .col-5 {
+        width: 41.66%;
+    }
+     .col-6 {
+        width: 50%;
+    }
+     .col-7 {
+        width: 58.33%;
+    }
+     .col-8 {
+        width: 66.66%;
+    }
+     .col-9 {
+        width: 75%;
+    }
+     .col-10 {
+        width: 83.33%;
+    }
+     .col-11 {
+        width: 91.66%;
+    }
+     .col-12 {
+        width: 100%;
+    }
+}
+ @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+     [class*="col-"] {
+         width: 100%;
+         border:1px solid white;
+    }
+}
+
+@headerColor: #DB1309;
+// @backgroundColor: #5758BB;
+@backgroundColorBoxes: #ecf0f1;
+@backgroundWhite:#ffffff;
+@fontsize: 10px;
+@imageLogoHeader: url("pictures/rsz_2logo.png");
+@backgroundImageHeader: url("");
+@backgroundImage: url("") ;
+
+ html {
+     font-family: 'Raleway', sans-serif;
+}
+body {
+  background-image: @backgroundImage;
+  background-repeat:no-repeat;
+  width: 100%;
+  margin:0;
+  padding:0;
+}
+
+ label {
+     display:block;
+     font-size: @fontsize * 2.0;
+}
+
+input[type='radio'] {
+  transform: scale(2);
+  margin:10PX;
+}
+
+ #form {
+     display: none;
+     background-color: @backgroundColorBoxes;
+}
+
+ .forminput {
+     height: @fontsize * 3;
+     width: 600px;
+}
+
+ #title {
+
+     font-weight: 700;
+     font-size: @fontsize * 3;
+     background-color: #B20761;
+     color:white;
+}
+
+ #subtitle {
+     font-weight: 900;
+     font-size: @fontsize * 1.5;
+}
+
+ #content {
+     font-size: @fontsize * 1.5
+}
+
+#footer  {
+  padding:0px;
+    a {
+      display:inline-block;
+
+      &.fa {
+        padding: 20px;
+       font-size: 20px;
+       width: 20px;
+       text-align: center;
+       text-decoration: none;
+       margin: 5px 2px;
+       border-radius: 50%;
+       color:white;
+
+          &.fa-facebook {
+              background: #3B5998;
+         }
+         &.fa-twitter {
+             background: #55ACEE;
+        }
+        &.fa-google {
+            background: #dd4b39;
+       }
+      }
+    }
+}
+
+#logoItem {
+  height:75px;
+  width:75px;
+}
+
+.labelform {
+    font-weight: 700;
+}
+#warning {
+ color:red;
+ font-style: italic;
+ font-weight: bold;
+ margin-bottom:20px;
+
+}
+
+.footer {
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background-color: @headerColor;
+
+}
+.container-result {
+  display:none;
+}
+.container-content {
+    background-color: @backgroundColorBoxes;
+    margin-top: 30px;
+    margin-bottom:70px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.container-result {
+    background-color: @backgroundColorBoxes;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+ .question {
+       padding-top:10px;
+     font-size: @fontsize * 4;
+      font-weight:700;
+      background-color: #B20761;
+
+      .fa {
+        font-size: @fontsize * 3;
+        padding:10px;
+      }
+}
+.header {
+    background-image:@backgroundImageHeader;
+    height: 175px;
+    margin:0;
+    padding:0;
+    background-repeat:round;
+}
+ .subheader {
+     background-color: @headerColor;
+     color: @backgroundWhite;
+     padding: 3px;
+     margin:0;
+}
+.container-question {
+  margin:15px;
+
+}
+.container-logo {
+  float:right;
+  padding:2px;
+  width: 80px;
+  height:75px;
+  border-radius: 0px 0px 0px 10px;
+  background-repeat:no-repeat;
+  background-color:@backgroundWhite;
+}
+
+ .container-page {
+     // background-color: @backgroundImage;
+     // width:100%;
+}
+
+ .center {
+     text-align: center;
+}
+
+.fa:hover {
+     opacity: 0.7;
+}
+.form {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+// button
+.questionButton {
+  border: none;
+  background-color:;
+  border-radius: 5px;
+  color: @backgroundColorBoxes;
+  cursor: pointer;
+  padding: 0px 30px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  line-height: 46px;
+  font-weight: 400;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  border-radius: 23px;
+  letter-spacing: 2px;
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.questionButton:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: inherit;
+  background-color: @backgroundColorBoxes;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.questionButton:after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  // border: 5px solid @backgroundColor;
+  content: '';
+  border-radius: inherit;
+}
+.questionButton:hover,
+.questionButton.hover {
+  // background-color: @backgroundColor;
+  color: #ffffff;
+}
+.questionButton:hover:before,
+.questionButton.hover:before {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  opacity: 0.25;
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formdata>
+  <questions>
+    <question>
+      <id>1</id>
+      <desc>lievelingskleur</desc>
+      <type>janee</type>
+      <uitleg>uitleg over de vraag</uitleg>
+
+      <options>
+        <desc>rood</desc>
+        <points>15</points>
+        <then>2</then>
+      </options>
+
+      <options>
+        <desc>blauw</desc>
+        <points>20</points>
+        <then>Finish</then>
+      </options>
+
+      <options>
+        <desc>oranje</desc>
+        <points>30</points>
+        <then>Finish</then>
+      </options>
+    </question>
+
+    <question>
+      <id>2</id>
+      <desc>THEFUCK IS THIS</desc>
+      <type>janee</type>
+      <uitleg>uitleg over de vraag</uitleg>
+
+      <options>
+        <desc>rood</desc>
+        <points>15</points>
+        <then>2</then>
+      </options>
+
+      <options>
+        <desc>blauw</desc>
+        <points>20</points>
+        <then>Finish</then>
+      </options>
+
+      <options>
+        <desc>oranje</desc>
+        <points>30</points>
+        <then>Finish</then>
+      </options>
+    </question>
+
+    <question>
+      <id>Finish</id>
+      <desc>Wil je koffie</desc>
+      <type>janee</type>
+      <uitleg>uitleg over de vraag</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>15</points>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>20</points>
+      </options>
+    </question>
+  </questions>
+
+  <results>
+
+    <result>
+      <mintotalpoints>10</mintotalpoints>
+      <maxtotalpoints>20</maxtotalpoints>
+      <name>goed</name>
+      <resultdesc>what</resultdesc>
+      <link>link</link>
+    </result>
+    <result>
+      <mintotalpoints>10</mintotalpoints>
+      <maxtotalpoints>40</maxtotalpoints>
+      <name>goed</name>
+      <resultdesc>what</resultdesc>
+      <link>link</link>
+    </result>
+  </results>
+
+  <home>
+    <title>title </title>
+    <subtitle> subtitle</subtitle>
+    <contentparaf1>contentparaf1 </contentparaf1>
+    <contentparaf2> contentparaf2</contentparaf2>
+    <contentparaf3>contentparaf3 </contentparaf3>
+    <contentparaf4> contentparaf4</contentparaf4>
+    <contentparaf5>contentparaf5</contentparaf5>
+  </home>
+</formdata>
