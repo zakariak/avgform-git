@@ -6,6 +6,7 @@
 	<link href="style/style.less" rel="stylesheet/less" type="text/css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js">
 	</script>
+	<meta name="viewport" content="width=device-width" />
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -14,14 +15,15 @@
 		<div class="row">
 			<div class="col-12 col-m-12">
 				<div class="header">
-					<div class="container-logo"><img alt="" id="logoItem" src="style/pictures/rsz_2logo.png"></div>
+
+					<!-- <div class="container-logo"><img alt="" id="logoItem" src="style/pictures/rsz_2logo.png"></div> -->
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="container-page">
-		<div class="subheader" id="headertitle">
-			<h1>AVG Tool</h1>
+		<div class="subheader">
+			<div id="header-title">The AVG Tool</div>
 		</div>
 		<div class="row">
 			<div class="col-2 col-m-2">
@@ -30,29 +32,15 @@
 			<div class="col-8 col-m-8">
 				<div class="container-content center" id="questionOutput">
 					<div class="col-12 col-m-12">
-						<div id="title">
-							<!-- DPO zelftest: heeft uw organisatie een privacyfunctionaris nodig? -->
-						</div>
+						<div id="title"></div>
 					</div>
 					<div class="col-12 col-m-12">
-						<p id="subtitle">
-							<!-- De wet bescherming persoonsgegevens wordt strenger, heeft uw organisatie een Data Protection Officer (DPO) nodig? -->
-						</p>
+						<p id="subtitle"></p>
 					</div>
 					<div class="col-12 col-m-12">
-						<p id="content">
-							<!-- Elke organisatie heeft tot 25 mei 2018 de tijd om te voldoen aan alle verplichtingen uit de Europese General<br> -->
-						<!-- Data Protection Regulation (‘GDPR’) ofwel de Algemene Verordening Gegevensbescherming (‘AVG’).<br>
-						Zo verplicht deze, onder bepaalde omstandigheden, organisaties een DPO in het leven te roepen.<br>
-						Dit is een privacyfunctionaris die binnen de organisatie toezicht houdt op de verwerking van persoonsgegevens en naleving van de AVG.<br>
-						<!-- Wij helpen u graag met het beantwoorden van de vraag of uw organisatie een functionaris nodig heeft,<br>
-
-						die toeziet op de bescherming (inclusief beveiliging) van persoonsgegevens.<br>
-						Speciaal hiervoor heeft Kneppelhout & Korthals Advocaten de ‘DPO zelftest’ ontwikkeld.<br>
-						Na het invullen van dit gratis assessment ontvangt u direct, een vrijblijvend advies met betrekking tot de AVG gratis per e-mail.<br>
-						Waar bepaalde begrippen zijn aangeduid met krijgt u met één klik meer informatie te zien. -->
-					</p>
-					</div><button class="questionButton" id="start">Start!</button>
+						<p id="content"></p>
+					</div>
+					<button class="questionButton" id="start">Start!</button>
 				</div>
 			</div>
 			<div class="col-2 col-m-2">
@@ -76,22 +64,24 @@
 
 					<input class="questionButton" id="result" type="submit">
 				</form>
+						</div>
 			<div class="col-2 col-m-2">
 				&nbsp;
 			</div>
+	</div>
+
+	<div class="row">
+		<div class="col-2 col-m-2">
+			&nbsp;
 		</div>
-		<div class="row">
-			<div class="col-2 col-m-1">
-				&nbsp;
-			</div>
-			<div class="col-8 col-m-10">
-				<div class="container-result center" id="resultPage"></div>
-			</div>
-			<div class="col-2 col-m-1">
-				&nbsp;
-			</div>
+		<div class="col-8 col-m-8">
+			<div class="container-result center" id="resultPage"></div>
+		</div>
+		<div class="col-2 col-m-2">
+			&nbsp;
 		</div>
 	</div>
+
 	<div class="container-footer">
 		<div class="row">
 			<div class="footer">

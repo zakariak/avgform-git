@@ -1,99 +1,503 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <formdata>
+
+  <home>
+    <title>AVG Form</title>
+    <subtitle>lorem ipsum</subtitle>
+    <contentparaf1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</contentparaf1>
+    <contentparaf2> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   </contentparaf2>
+    <contentparaf3>Ut enim ad minim veniam, quis no</contentparaf3>
+    <contentparaf4>Ut enim ad minim veniam, quis no</contentparaf4>
+    <contentparaf5>Ut enim ad minim veniam, quis no</contentparaf5>
+  </home>
+
   <questions>
     <question>
-      <id>1</id>
-      <desc>lievelingskleur</desc>
+      <id>0</id>
+      <desc>Houdt je software bij welke persoonsgegevens gewijzigd worden?</desc>
       <type>janee</type>
-      <uitleg>uitleg over de vraag</uitleg>
+      <uitleg>Test test test?</uitleg>
 
       <options>
-        <desc>rood</desc>
-        <points>15</points>
-        <then>2</then>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>1</then>
       </options>
 
       <options>
-        <desc>blauw</desc>
-        <points>20</points>
-        <then>Finish</then>
-      </options>
-
-      <options>
-        <desc>oranje</desc>
-        <points>30</points>
+        <desc>Nee</desc>
+        <points>-10</points>
         <then>Finish</then>
       </options>
     </question>
 
     <question>
-      <id>2</id>
-      <desc>THEFUCK IS THIS</desc>
+      <id>1</id>
+      <desc>Heb je de mogelijkheid om een data subject / betrokkene op verzoek definitief te verwijderen uit je database?</desc>
       <type>janee</type>
-      <uitleg>uitleg over de vraag</uitleg>
+      <uitleg>Test test test?</uitleg>
 
       <options>
-        <desc>rood</desc>
-        <points>15</points>
-        <then>2</then>
-      </options>
-
-      <options>
-        <desc>blauw</desc>
-        <points>20</points>
+        <desc>Ja</desc>
+        <points>10</points>
         <then>Finish</then>
       </options>
 
       <options>
-        <desc>oranje</desc>
-        <points>30</points>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>2</then>
+      </options>
+    </question>
+
+    <question>
+      <id>2</id>
+      <desc>Bestaat er in de software de mogelijkheid om een data subject / betrokkene inzage te geven in zijn of haar gegevens? En zo ja, kan de software dit ook digitaal (bijv. via een app / webapp / persoonlijke online account)</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>3</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>3</then>
+      </options>
+
+      <options>
+        <desc>Exit </desc>
+          <points>-10</points>
+          <then>Finish</then>
+      </options>
+    </question>
+
+    <question>
+      <id>3</id>
+      <desc>Gebruik je de software waarvoor deze is bedoeld? Bijv. *Het kan zijn dat een bepaald softwarepakket bijv. niet bedoeld is om bijzondere persoonsgegevens te verwerken en hier dus mogelijk niet voor geschikt is qua technische en organisatorische veiligheidsmaatregelen.</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>4</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>4</then>
+      </options>
+    </question>
+
+    <question>
+      <id>4</id>
+      <desc>Hebben medewerkers van de softwareleverancier geheimhoudingsplicht? </desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>5</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>5</then>
+      </options>
+    </question>
+
+    <question>
+      <id>5</id>
+      <desc>Is het mogelijk om gedeeltes in de software af te schermen voor verschillende groepen of individuele gebruikers?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>6</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>6</then>
+      </options>
+    </question>
+
+    <question>
+      <id>6</id>
+      <desc>Voorziet je softwarepakket je bij dataportabiliteit. Kan je software bijv. al iemands gegevens in een voor een machine leesbare bestand (bijv. een XML bestand) zetten zodat je deze digitaal kan aanleveren.</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>7</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>7</then>
+      </options>
+    </question>
+
+    <question>
+      <id>7</id>
+      <desc>Heb je on premise software of heb je een SAAS  (in de cloud)?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>8</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>14</then>
+      </options>
+    </question>
+
+    <question>
+      <id>8</id>
+      <desc>Is je computer / server waar de software op staat met encryptie beveiligd</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>9</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>9</then>
+      </options>
+    </question>
+
+    <question>
+      <id>9</id>
+      <desc>Zijn de servers waar je data is opgeslagen fysiek goed beschermd? Bijv. met 24/7 bewaking of cameratoezicht.</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>10</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>10</then>
+      </options>
+    </question>
+
+    <question>
+      <id>10</id>
+      <desc>Gebruik je een sterk wachtwoord om in te loggen?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>11</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>11</then>
+      </options>
+    </question>
+
+    <question>
+      <id>11</id>
+      <desc>Heb je een stappenplan voor het melden van datalekken?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>12</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>12</then>
+      </options>
+    </question>
+
+    <question>
+      <id>12</id>
+      <desc>Logt je softwareleverancier wel eens in op afstand om onderhoud te plegen? In dat geval moet je hiervoor een verwerkersovereenkomst (voorheen een bewerkersovereenkomst) sluiten met de leverancier.</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>13</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>13</then>
+      </options>
+    </question>
+
+    <question>
+      <id>13</id>
+      <desc>Is je software geprogrammeerd met privacy design elementen?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>Finish</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>Finish</then>
+      </options>
+    </question>
+
+    <question>
+      <id>14</id>
+      <desc>Is de software alleen toegankelijk via Https?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>15</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>15</then>
+      </options>
+    </question>
+
+    <question>
+      <id>15</id>
+      <desc>Heeft je software leverancier een datalek procedure en een contactpersoon hiervoor? Het is verplicht om dit te documenteren per ingang van de AVG.</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>16</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>16</then>
+      </options>
+    </question>
+
+    <question>
+      <id>16</id>
+      <desc>Log je in de software doormiddel van Two Step Authentication in?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>17</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>17</then>
+      </options>
+    </question>
+
+    <question>
+      <id>17</id>
+      <desc>Heeft je software leverancier een verwerkersovereenkomst (voorheen een bewerkersovereenkomst) met je gesloten? Tip: Je bent in de ogen van van de GDPR de verwerkingsverantwoordelijke en je moet een verwerkersovereenkomst met je leverancier hebben gesloten gebaseerd op de AVG (de Wbp vervalt namelijk per 25 mei 2018)</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>18</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>18</then>
+      </options>
+    </question>
+
+    <question>
+      <id>18</id>
+      <desc>Worden je gegevens binnen 3 maanden vernietigd als je je abonnement opzegt?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>19</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>19</then>
+      </options>
+    </question>
+
+    <question>
+      <id>19</id>
+      <desc>Is je software geprogrameerd met privacy design elementen?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>20</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>20</then>
+      </options>
+    </question>
+
+    <question>
+      <id>20</id>
+      <desc>Worden de persoonsgegevens binnen de EU/EER verwerkt?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>21</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>21</then>
+      </options>
+    </question>
+
+    <question>
+      <id>21</id>
+      <desc>Weet je of je software leverancier gebruik maakt van subbewerkers?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>22</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
+        <then>22</then>
+      </options>
+    </question>
+
+    <question>
+      <id>22</id>
+      <desc>Ontvang je bij beëindiging van het contract alle data terug van je software leverancier?</desc>
+      <type>janee</type>
+      <uitleg>Test test test?</uitleg>
+
+      <options>
+        <desc>Ja</desc>
+        <points>10</points>
+        <then>Finish</then>
+      </options>
+
+      <options>
+        <desc>Nee</desc>
+        <points>-10</points>
         <then>Finish</then>
       </options>
     </question>
 
     <question>
       <id>Finish</id>
-      <desc>Wil je koffie</desc>
-      <type>janee</type>
-      <uitleg>uitleg over de vraag</uitleg>
-
-      <options>
-        <desc>Ja</desc>
-        <points>15</points>
-      </options>
-
-      <options>
-        <desc>Nee</desc>
-        <points>20</points>
-      </options>
     </question>
   </questions>
 
+
+
   <results>
+    <result>
+      <mintotalpoints>-1000</mintotalpoints>
+      <maxtotalpoints>50</maxtotalpoints>
+      <name>Resultaat is erg slecht!</name>
+      <resultdesc>Er is maar een conclusie mogelijk: Stap zo snel mogelijk over op een ander softwarepakket als je persoonsgegevens verwerkt</resultdesc>
+            <link>www.koren.nl</link>
+    </result>
 
     <result>
-      <mintotalpoints>10</mintotalpoints>
-      <maxtotalpoints>20</maxtotalpoints>
-      <name>goed</name>
-      <resultdesc>what</resultdesc>
-      <link>link</link>
+      <mintotalpoints>51</mintotalpoints>
+      <maxtotalpoints>100</maxtotalpoints>
+      <name>Er is wel wat aan de waarborging van privacy gedaan maar nog wel echt onvoldoen</name>
+      <resultdesc>a</resultdesc>
     </result>
+
     <result>
-      <mintotalpoints>10</mintotalpoints>
-      <maxtotalpoints>40</maxtotalpoints>
-      <name>goed</name>
-      <resultdesc>what</resultdesc>
-      <link>link</link>
+      <mintotalpoints>101</mintotalpoints>
+      <maxtotalpoints>145</maxtotalpoints>
+      <name>Op bepaalde gebieden scoort de software vrij goed maar op andere gebieden zijn er echt problemen, overweeg een overstap naar een beter pakket.</name>
+      <resultdesc>a</resultdesc>
+    </result>
+
+    <result>
+      <mintotalpoints>146</mintotalpoints>
+      <maxtotalpoints>157</maxtotalpoints>
+      <name>Je software is vrij goed op orde maar je misschien moet nog wel wat punten op de i zetten, misschien moet je eens contact opnemen met de leverancier en vragen of er wat gedaan kan worden.s</name>
+      <resultdesc>a</resultdesc>
+
+    </result>
+
+    <result>
+      <mintotalpoints>158</mintotalpoints>
+      <maxtotalpoints>160</maxtotalpoints>
+      <name>Je software is GDPR proof!</name>
+      <resultdesc>a</resultdesc>
     </result>
   </results>
-
-  <home>
-    <title>title </title>
-    <subtitle> subtitle</subtitle>
-    <contentparaf1>contentparaf1 </contentparaf1>
-    <contentparaf2> contentparaf2</contentparaf2>
-    <contentparaf3>contentparaf3 </contentparaf3>
-    <contentparaf4> contentparaf4</contentparaf4>
-    <contentparaf5>contentparaf5</contentparaf5>
-  </home>
 </formdata>

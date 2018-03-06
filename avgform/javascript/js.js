@@ -1,6 +1,7 @@
 var formDataLookup = {};
 var choiceHistory = [];
 var submitHistory = {};
+var questions = {};
 var result = null;
 // console.log(choiceHistory);
 function getJson() {
@@ -18,8 +19,9 @@ function getJson() {
 
 
 function onConfigurationReady(configuration) {
-  var questions = configuration.questions;
+
   var home = configuration.home;
+  questions = configuration.questions;
   result = configuration.results;
 
 
@@ -35,51 +37,52 @@ function onConfigurationReady(configuration) {
 
   document.getElementById("result").addEventListener("click", function(ev) {
         ev.preventDefault();
+            var elTarget = document.getElementById('questionOutput');
+            var elTarget2 = document.getElementById('form');
+        removeAllChildren(elTarget);
+        elTarget2.style.marginTop = '0';
+        elTarget2.style.marginBottom = '0';
+
         validateInput();
-        jsonToPhp();
+        jsonToPhp()
+        sumAll(questions);
+        window.scrollTo(500, 0);
   });
 }
 
 getJson();
 
+
+function sumAll(questionsParam) {
+  total = 0;
+  for (key in choiceHistory) {
+    var choiceInfo = choiceHistory[key];
+    questionByChoice = choiceHistory[key].q;
+    answerByChoice = choiceHistory[key].a;
+    points = parseInt(questionsParam[questionByChoice].options[answerByChoice].points);
+    total += points
+  }
+  return total;
+}
+
+
 function jsonToPhp() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-
-        //var questionOutput = arrayToJson(choiceHistory);
-
         console.log(this.responseText);
-
-
-          // var formOutput  arrayToJson(submitHistory);
     }
   }
-  xhttp.open("POST", "php/receivedJson.php", true);
-  //request.setRequestHeader("Content-type", "application/json");
-
-  //@todo de eigelijke data sturen
-  //@todo dat moet als een json string (json striginy)
-
-
-  // var postData = {
-  //   'color': 'red',
-  //   'good': 'very good',
-  //   'jesus': true
-  // };
-
-
+  xhttp.open("POST", "php/formOutput.php", true);
 
 var postData = {
   choiceHistory: choiceHistory,
   submitHistory: submitHistory
 };
+
 var postDataString = JSON.stringify(postData);
 
-
   xhttp.send(postDataString);
-
-
 }
 
 function arrayToJson(array) {
@@ -102,42 +105,12 @@ function validateInput() {
     submitHistory.bname = bname.value;
     submitHistory.email = email.value;
 
-    //submitHistory.push(name.value, bname.value, email.values);
-    console.log(submitHistory);
+    var eltarget2 = document.getElementById('questionOutput');
     var elTarget = document.getElementById('form');
     removeAllChildren(elTarget);
+    removeAllChildren(eltarget2);
     createResult();
   }
-
-  // const form = document.getElementById('form');
-  // form.addEventListener('submit', function(ev) {
-  //
-  // 	return false;
-  // });
-  //
-  // document.getElementById('naam').addEventListener('input', function (ev) {
-  // 	const name = ev.target;
-  // 	if(name.value = "") {
-  // 		name.setCustomValidity("It cannot be empty!");
-  // 	} else {
-  // 		name.setCustomValidity("");
-  // 	}
-  // });
-  // document.getElementById('bedrijfsnaam').addEventListener('', function (ev) {
-  //   const cname = ev.target;
-  //   if(cname.value = "") {
-  //     cname.setCustomValidity("It cannot be empty!");
-  //   } else {
-  //     cname.setCustomValidity("");
-  //   }
-  // })
-  // document.getElementById('email').addEventListener('input', function (ev) {
-  //   if (ev.target.validity.typeMismatch) {
-  // 	  ev.target.setCustomValidity("Email is not valid!");
-  //   } else {
-  // 	  ev.target.setCustomValidity("");
-  //   }
-  // });
 }
 
 function getQuestion(question) {
@@ -149,6 +122,8 @@ function getQuestion(question) {
   if (question.id == 'Finish') {
     removeAllChildren(elTarget);
     document.getElementById("form").style.display = "block";
+    elTarget.style.marginTop = '0px';
+    elTarget.style.marginBottom = '0px';
   }
   else {
     var elContainer = document.createElement('div');
@@ -193,6 +168,7 @@ function getQuestion(question) {
     if (question.type == "janee") {
       var name = null;
       for (key in question.options) {
+        question.options[key].index = key;
         // create the label, radio buttons and info from the question
         var label = createLabel(question.options[key]);
         var radio = createRadio(question.options[key]);
@@ -251,8 +227,7 @@ function getQuestion(question) {
         }
         else {
             getQuestion(formDataLookup[SelectedRadio.optionDetails.then]);
-            choiceHistory.push(SelectedRadio.optionDetails);
-            console.log(SelectedRadio.optionDetails);
+            choiceHistory.push({q: question.id, a:  SelectedRadio.optionDetails.index});
         }
       }
     }
@@ -317,20 +292,15 @@ function createButton(options, fn) {
 function createRadio(options) {
   var radioSelection = document.createElement('input');
   radioSelection.setAttribute('type', 'radio');
-  //radioSelection.setAttribute('name', options.name);
   radioSelection.setAttribute('name', 'helloworld');
-  // radioSelection.setAttribute('value', '');
-  //radioSelection.setAttribute('value', options.value);
   radioSelection.optionDetails = options;
   return radioSelection;
 }
 
-function sumAll(choiceHistory) {
-  var total = 0;
-  for (var i = 0; i < choiceHistory.length; i++) {
-    total += parseInt(choiceHistory[i].points);
-  }
-  return total;
+for (key in formDataLookup) {
+  var a = formDataLookup[key];
+
+  continue;
 }
 
 function createSelect(options, questionId) {
@@ -364,21 +334,27 @@ function createResult() {
   var resultContainer = document.createElement("p");
   resultContainer.setAttribute('id', 'resultContainer');
 
+  var resultTitle = document.createElement('div');
+  resultTitle.setAttribute('id', 'resultTitle');
+  resultTitle.innerText = "Resultaat: ";
+
+  resultPage.appendChild(resultTitle);
   resultPage.appendChild(resultContainer);
 
   var resultdescContainer = document.createElement("p");
   resultdescContainer.setAttribute('id', 'resultDescContainer');
+
+  var resultDescTitle = document.createElement('p');
+
+  resultPage.appendChild(resultDescTitle);
   resultPage.appendChild(resultdescContainer);
 
   var resultlinkContainer = document.createElement("p");
   resultlinkContainer.setAttribute('id', 'resultLinkContainer');
   resultPage.appendChild(resultlinkContainer);
 
-  var total = sumAll(choiceHistory);
-  console.log(total);
-  console.log(result);
+  var total = sumAll(questions);
   for (key in result) {
-
     if ((total >= result[key].mintotalpoints) && (total <= result[key].maxtotalpoints)) {
       resultContainer.innerText = result[key].name;
       resultdescContainer.innerText = result[key].resultdesc;
