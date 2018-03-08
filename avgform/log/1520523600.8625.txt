@@ -1,0 +1,61 @@
+==[Mail to us]===
+To: zkzk@Live.nl
+subject: AVG Tool gebruikt door dfd
+
+body: --X5aa15950d2914-mixed
+Content-Type: multipart/alternative; boundary="X5aa15950d2914-alt"
+
+--X5aa15950d2914-alt
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Houdt je software bij welke persoonsgegevens gewijzigd worden?: Nee
+
+Heb je de mogelijkheid om een data subject / betrokkene op verzoek definitief te verwijderen uit je database?: Nee
+
+Bestaat er in de software de mogelijkheid om een data subject / betrokkene inzage te geven in zijn of haar gegevens? En zo ja, kan de software dit ook digitaal (bijv. via een app / webapp / persoonlijke online account): Exit 
+
+
+Naam: fdf
+
+Bedrijfsnaam: dfd
+
+Email-adres: df
+
+
+Eindresultaat: Resultaat is erg slecht!
+
+Totaalpunten: -30
+
+
+Datum: Thu, 08 Mar 2018 16:40:00 +0100
+
+
+
+
+
+==[Mail to them]===
+To: df
+
+subject: Bekijk je AVG score
+body: --X5aa15950d2914-mixed
+Content-Type: multipart/alternative; boundary="X5aa15950d2914-alt"
+
+--X5aa15950d2914-alt
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Geachte Fdf
+
+
+U heeft gebruik gemaakt van de AVG Tool en hieronder ziet u het resultaat daarvan.
+
+Resultaat is erg slecht!
+
+
+Bekijk de technische en organisatorische maatregelen die wij voor onze software hebben genomen hier op https://www.koren.nl/inleiding-avg-gdpr en neem contact met ons op als je interesse hebt in onze producten of diensten.
+
+Met vriendelijke groet,
+
+Team Kor�n
+

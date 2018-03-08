@@ -27,7 +27,7 @@
       <options>
         <desc>Nee</desc>
         <points>-10</points>
-        <then>Finish</then>
+        <then>1</then>
       </options>
     </question>
 
@@ -40,7 +40,7 @@
       <options>
         <desc>Ja</desc>
         <points>10</points>
-        <then>Finish</then>
+        <then>2</then>
       </options>
 
       <options>
@@ -468,7 +468,7 @@
       <maxtotalpoints>50</maxtotalpoints>
       <name>Resultaat is erg slecht!</name>
       <resultdesc>Er is maar een conclusie mogelijk: Stap zo snel mogelijk over op een ander softwarepakket als je persoonsgegevens verwerkt</resultdesc>
-            <link>www.koren.nl</link>
+            <link>https://www.koren.nl/inleiding-avg-gdpr</link>
     </result>
 
     <result>

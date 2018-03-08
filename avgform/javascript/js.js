@@ -41,12 +41,10 @@ function onConfigurationReady(configuration) {
             var elTarget2 = document.getElementById('form');
         removeAllChildren(elTarget);
         elTarget2.style.marginTop = '0';
-        elTarget2.style.marginBottom = '0';
+        elTarget2.style.marginBottom = '100';
 
         validateInput();
-        jsonToPhp()
-        sumAll(questions);
-        window.scrollTo(500, 0);
+        // window.scrollTo(500, 0);
   });
 }
 
@@ -92,15 +90,24 @@ function arrayToJson(array) {
 
 function validateInput() {
 
+  var oldTheError = document.getElementById('warning-form');
+  if( oldTheError ) {
+    oldTheError.parentNode.removeChild(oldTheError);
+  }
+
   var name =  document.getElementById('naam');
   var bname = document.getElementById('bedrijfsnaam');
   var email = document.getElementById('email');
   // console.log(bname.value);
-  if (name.value == '' || bname.value == '' || email.value == '') {
-    alert("wrong boi");
+  if (name.value == '' || bname.value == '' || email.value == '' && email.value != '@') {
+    var form = document.getElementById('form');
+    var theError = document.createElement('div');
+    theError.setAttribute('class', 'warning-form');
+    theError.setAttribute('id', 'warning-form');
+    theError.innerText = 'Je bent wat vergeten in te vullen';
+    form.appendChild(theError);
+
   } else {
-
-
     submitHistory.name = name.value;
     submitHistory.bname = bname.value;
     submitHistory.email = email.value;
@@ -110,6 +117,8 @@ function validateInput() {
     removeAllChildren(elTarget);
     removeAllChildren(eltarget2);
     createResult();
+    jsonToPhp()
+    sumAll(questions);
   }
 }
 
@@ -210,6 +219,12 @@ function getQuestion(question) {
           }
         }
         if (!SelectedRadio) {
+
+          var oldTheError = document.getElementById('warning');
+          if(oldTheError) {
+            oldTheError.parentNode.removeChild(oldTheError);
+          }
+
           var elGridWarning = document.createElement('div');
           elGridWarning.setAttribute('class', 'col-12 col-m-12');
 
@@ -358,7 +373,9 @@ function createResult() {
     if ((total >= result[key].mintotalpoints) && (total <= result[key].maxtotalpoints)) {
       resultContainer.innerText = result[key].name;
       resultdescContainer.innerText = result[key].resultdesc;
-      resultlinkContainer.innerText = result[key].link;
+      var objectLink = result[key].link;
+      var link = objectLink.link(objectLink);
+      resultlinkContainer.innerHTML = link;
       break;
     }
   }
